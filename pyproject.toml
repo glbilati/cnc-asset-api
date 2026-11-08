@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 [project.scripts]
-cnc-asset-api = "cnc_asset_api:main"
+cnc-asset-api = "cnc_asset_api.cli:run"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
