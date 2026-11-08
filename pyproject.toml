@@ -28,3 +28,21 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--cov=cnc_asset_api --cov-report=term-missing"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle: errors
+    "F",    # pyflakes: imports and unused variables
+    "I",    # isort: import order
+    "B",    # bugbear: common pitfalls
+    "UP",   # pyupgrade: modern Python syntax
+]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["src", "tests"]
